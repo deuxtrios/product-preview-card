@@ -1,0 +1,132 @@
+@use "sass:map"
+
+@media only screen and (min-width: 1440px)
+    // Variables
+    // Body
+    $body: ("font-size": 16px, "display": flex, "justify-content": center, "align-items": center, "flex-direction": column, "padding": 0, "margin": 0, "background-color": #f3eae3, "border-box": border-box, "font-family": "Fraunces", "height": 100vh)
+
+    // Body > Main
+    $main: ("display": inherit, "flex-direction": row, "justify-content": flex-start, "align-items": flex-start, "margin-top": 10%, "background-color": #FFFFFF, "width": 50%, "border-radius": 10px)
+
+    // Main > Img
+    $img: ("width": 40%)
+
+    // Main > Section#Right-Side 
+    $section: ("margin-left": 1em, "margin-top": 1em)
+
+    // Section#Right-Side > h1#meta-title
+    $h1-meta: ("font-family": 'Montserrat', "font-weight": 300, "font-size": 1em, "letter-spacing": 0.5em, "text-transform": uppercase)
+
+    // Section#Right-Side > h1#title
+    $h1-title: ("width": 50%, "font-size": 2em)
+
+    // Section#Right-Side > p
+    $p: ("font-size": 0.9em, "width": 50%, "opacity": 0.5)
+
+    // Section#Right-Side > div#prices
+    $prices: ("display": flex)
+
+    // div#prices > h1
+    $prices-h1: ("color": hsl(158, 36%, 37%))
+
+    // div#prices > p
+    $prices-p: ("align-self": center, "margin-left": 1em)
+
+    // Section#Right-Side > button
+    $button: ("display": flex, "padding": 1em, "width": 50%, "background-color": hsl(158, 36%, 37%), "justify-content": center, "color": white, "align-items": center, "border": transparent, "border-radius": 5px)
+
+    // button > :hover
+    $button-hover: ("background-color": hsl(158, 42%, 18%))
+
+    // button > img
+    $button-img: ("margin-right": 1em)
+
+    // Body > Footer
+    $footer: ("margin-bottom": 10%, "background-color": hsl(158, 36%, 37%), "margin-top": 1em, "padding": 1em, "color": white, "text-decoration": none)
+    $footer-a: hsl(212, 21%, 14%)
+
+    // Style Rules
+    * 
+        box-sizing: map-get($body, "border-box")
+    body
+        font-size: map-get($body, "font-size")
+        font-family: map-get($body, "font-family")
+        display: map-get($body, "display")
+        justify-content: map-get($body, "justify-content")
+        align-items: map-get($body, "align-items")
+        flex-direction: map-get($body, "flex-direction")
+        background-color: map-get($body, "background-color")
+        height: map-get($body, "height")
+        padding: map-get($body, "padding")
+        margin: map-get($body, "margin")
+        main
+            display: map-get($main, "display")
+            flex-direction: map-get($main, "flex-direction")
+            justify-content: map-get($main, "justify-content")
+            align-items: map-get($main, "align-items")
+            margin-top: map-get($main, "margin-top")
+            background-color: map-get($main, "background-color")
+            width: map-get($main, "width")
+            border-radius: map-get($main, "border-radius")
+            img
+                width: map-get($img, "width")
+
+                border:
+                    top-left-radius: map-get($main, "border-radius")
+                    bottom-left-radius: map-get($main, "border-radius")
+            section#right-side
+                margin:
+                    left: map-get($section, "margin-left")
+                    top: map-get($section, "margin-top")
+                h1#meta-title
+                    font:
+                        family: map-get($h1-meta, "font-family")
+                        weight: map-get($h1-meta, "font-weight")
+                        size: map-get($h1-meta, "font-size")
+
+                    letter-spacing: map-get($h1-meta, "letter-spacing")
+                    text-transform: map-get($h1-meta, "text-transform")
+                h1#title
+                    width: map-get($h1-title, "width")
+                    font-size: map-get($h1-title, "font-size")
+                p
+                    font-size: map-get($p, "font-size")
+                    width: map-get($p, "width")
+                    opacity: map-get($p, "opacity")
+                div#prices
+                    display: map-get($prices, "display")
+                    h1#price-one
+                        color: map-get($prices-h1, "color")
+                    p#price-two
+                        align-self: map-get($prices-p, "align-self")
+                        margin-left: map-get($prices-p, "margin-left")
+                button
+                    display: map-get($button, "display")
+                    padding: map-get($button, "padding")
+                    width: map-get($button, "width")
+                    background-color: map-get($button, "background-color")
+                    justify-content: map-get($button, "justify-content")
+                    align-items: map-get($button, "align-items") 
+                    color: map-get($button, "color")
+                    border: map-get($button, "border")
+                    border-radius: map-get($button, "border-radius")
+                    img
+                        width: 5% !important
+                        margin-right: map-get($button-img, "margin-right")
+                    &:hover
+                        background-color: map-get($button-hover, "background-color")
+
+        footer
+            margin:
+                top: map-get($footer, "margin-top")
+                bottom: map-get($footer, "margin-bottom")
+            background-color: map-get($footer, "background-color")
+            padding: map-get($footer, "padding")
+            color: map-get($footer, "color")
+            a
+                text-decoration: map-get($footer, "text-decoration")
+                color: $footer-a
+            a:hover
+                color: hsl(158, 42%, 18%)
+
+    

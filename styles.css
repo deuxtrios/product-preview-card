@@ -1,0 +1,96 @@
+@media only screen and (min-width: 1440px) {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 16px;
+    font-family: "Fraunces";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f3eae3;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  body main {
+    display: inherit;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10%;
+    background-color: #FFFFFF;
+    width: 50%;
+    border-radius: 10px;
+  }
+  body main img {
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  body main section#right-side {
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+  body main section#right-side h1#meta-title {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+  }
+  body main section#right-side h1#title {
+    width: 50%;
+    font-size: 2em;
+  }
+  body main section#right-side p {
+    font-size: 0.9em;
+    width: 50%;
+    opacity: 0.5;
+  }
+  body main section#right-side div#prices {
+    display: flex;
+  }
+  body main section#right-side div#prices h1#price-one {
+    color: hsl(158, 36%, 37%);
+  }
+  body main section#right-side div#prices p#price-two {
+    align-self: center;
+    margin-left: 1em;
+  }
+  body main section#right-side button {
+    display: flex;
+    padding: 1em;
+    width: 50%;
+    background-color: hsl(158, 36%, 37%);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+  }
+  body main section#right-side button img {
+    width: 5% !important;
+    margin-right: 1em;
+  }
+  body main section#right-side button:hover {
+    background-color: hsl(158, 42%, 18%);
+  }
+  body footer {
+    margin-top: 1em;
+    margin-bottom: 10%;
+    background-color: hsl(158, 36%, 37%);
+    padding: 1em;
+    color: white;
+  }
+  body footer a {
+    text-decoration: none;
+    color: hsl(212, 21%, 14%);
+  }
+  body footer a:hover {
+    color: hsl(158, 42%, 18%);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
