@@ -1,5 +1,38 @@
 @use "sass:map"
 
+@media only screen and (min-width: 375px)
+    // Body
+    %body-styles
+        $body-display: flex
+        $body-justify-content: center
+        $body-align-items: center
+        $body-width: 100%
+        $body-height: 100%
+        $padding: 0
+        $margin: 0
+        $font-size: 16px
+
+        display: $body-display
+        justify-content: $body-justify-content
+        align-items: $body-align-items
+        padding: $padding
+        margin: $margin
+        width: $body-width
+        height: $body-height
+        font-size: $font-size
+
+    %main-styles
+        $main-display: flex
+        $main-flex-direction: column
+
+        display: $main-display
+        flex-direction: $main-flex-direction
+
+    body
+        @extend %body-styles
+        main
+            @extend %main-styles
+
 @media only screen and (min-width: 1440px)
     // Variables
     // Body
@@ -129,4 +162,6 @@
             a:hover
                 color: hsl(158, 42%, 18%)
 
+
+                
     
